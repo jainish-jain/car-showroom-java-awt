@@ -1,0 +1,45 @@
+create database ip_project_carshowroom;
+use ip_project_carshowroom;
+
+create table users (username varchar(30) primary key,password varchar(30)not null, FirstName varchar(30) not null, LastName varchar(30)not null);
+insert into users values ('admin','admin','admin','admin');
+
+create table bmw(car varchar(10),car_class varchar(50),price varchar(15),top_speed varchar(10),layout varchar(100),engine varchar(100),transmission varchar(100));
+insert into bmw values('1 series','Compact car','Rs 31 Lakh','212 kmph','1.5L v5 engine','Front engine, Rear wheel drive','5-speed manual transmission');
+insert into bmw values('X3','Compact luxury crossover SUV','Rs 48 Lakh','195 kmph','3.0 L N55B30M0 turbo I6','Front engine, Rear wheel drive','8-speed ZF 8HP automatic');
+insert into bmw values('Z4','Compact luxury sports car','Rs 76 Lakh','251 kmph','1.5L v5 engine','Front engine, Rear wheel drive','8 speed ZF 8HP automatic');
+
+create table chevrolet(car varchar(10),car_class varchar(30),price varchar(15),top_speed varchar(10),layout varchar(100),engine varchar(100),transmission varchar(100));
+insert into chevrolet values('Corvette','Sports car','Rs 50 Lakh','205.6 mph','Front-mid engine, Rear-wheel drive','6.2 L LT4 supercharged V8','8-speed automatic');
+insert into chevrolet values('Cruze','Compact car','Rs 20 Lakh','240 kmph','Transverse front-engine, Front-wheel drive','1.4 L LE2 I4','6-speed GM 6T35 automatic');
+insert into chevrolet values('Bolt','Subcompact','Rs 34 Lakh','140 kmph','Transverse front-engine, Front-wheel drive','150 kW (200 hp) permanent magnet motor','Electronic Precision Shift');
+
+create table honda(car varchar(10),car_class varchar(30),price varchar(15),top_speed varchar(10),layout varchar(100),engine varchar(100),transmission varchar(100));
+insert into honda values('Amaze','City car','Rs 5.62 lakhs','165 kmph','Front-engine, Front-wheel drive','1.2 L L12B i-VTEC I4 (gasoline)','5-speed manual/automatic');
+insert into honda values('Avancier','Mid-size crossover SUV','Rs 30 lakhs','180 kmph','Front-engine, Front-wheel drive','2.0 K20C3 VTEC TURBO','ZF 9-speed automatic');
+insert into honda values('Brio','5-door hatchback','Rs 7.06 lakhs','180 kmph','Front-engine, Front-wheel drive','1.3 L L13A i-VTEC I4','5-speed manual/automatic');
+
+create table koenigsegg(car varchar(10),car_class varchar(30),price varchar(15),top_speed varchar(10),layout varchar(100),engine varchar(100),transmission varchar(100));
+insert into koenigsegg values('CCXR','Sports car','Rs 3 crore','410 kmph','Rear mid-engine, Rear-wheel drive','4.8L V8 twin engine','6-speed manual/automatic');
+insert into koenigsegg values('One:1','Sports car','Rs 12 crore','451 kmph','Rear mid-engine, Rear-wheel drive','5L V8 twin-tubocharged engine','7-speed dual clutch paddle shift');
+insert into koenigsegg values('Agera RS','Sports car','Rs 12 crore','430 kmph','Rear mid-engine, Rear-wheel drive','5L V8 twin engine','7-speed dual clutch paddle shift');
+
+create table lamborghini(car varchar(10),car_class varchar(50),price varchar(15),top_speed varchar(10),layout varchar(100),engine varchar(100),transmission varchar(100));
+insert into lamborghini values('Gallardo','Sports car','Rs 3.06 crore','325 kmph','Longitudinal, M4','Odd firing 5.2 L V10','6-speed E-Gear automated manual');
+insert into lamborghini values('Murcielago','Supercar','Rs 3.6 crore','330 kmph','Longitudinal, Mid engine, All wheel drive','6.5 L V12 (670 HP)','6-speed e-Gear semi-automatic');
+insert into lamborghini values('Aventador','Sports car','Rs 4.78 crore','350 kmph','Longitudinal, Mid engine, All wheel drive','6.5 L L539 V12','7-speed ISR Semi-automatic transmission');
+
+create table tesla(car varchar(10),car_class varchar(30),price varchar(15),top_speed varchar(10),layout varchar(100),engine varchar(100),transmission varchar(100));
+insert into tesla values('Roadster','2-door roadster','Rs 49 Lakhs','125 mph','Rear-mid engine, Rear-wheel drive','2.5 Sport 288 hp 295 lb.ft','Single speed BorgWarner fixed gear');
+insert into tesla values('Model S','5-door liftback','Rs 35 Lakhs','155 mph','Rear-motor, Rear-wheel drive','Front and rear motor combined output up to 762 bhp','1-speed fixed gear');
+insert into tesla values('Model X','Full size,luxury,crossover SUV','Rs 55 Lakhs','155 mph','Rear-mid engine, Rear-wheel drive','Dual Motor AWD 90D','Single-speed transaxle gearbox');
+
+create table servicepage(companies varchar(30), country varchar(30), address varchar(100), service_no int(30), delivery_no int(30));
+insert into servicepage values( "bmw","Germany","Munich Bavaria",18001099,18001032);
+insert into servicepage values( "chevrolet","U.S.A","Detroit Michigan",180030008,180064131);
+insert into servicepage values( "honda","Japan","Minato Tokyo",124229091,1242294514);
+insert into servicepage values( "koenigsegg","Sweden","Angelholm",1643134544,164315443);
+insert into servicepage values( "lamborghini","Italy","Santagata Bolognese",190595928,390595964);
+insert into servicepage values( "tesla","U.S.A","Palo Alto California",888518375,888518365);
+
+create table testdrive (car varchar(30),city varchar(30),dealer varchar(30),location varchar(50),name varchar(30),address varchar(100),pin varchar(10),email varchar(30),mobile varchar(15),telephone varchar(10));
